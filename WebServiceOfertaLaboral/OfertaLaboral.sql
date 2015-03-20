@@ -1,0 +1,2 @@
+DROP TABLE IF EXISTS oferta;
+CREATE TABLE oferta (id int(10) NOT NULL comment 'id de la oferta', detalle varchar(255) comment 'detalle de la oferta', mail varchar(255) comment 'email del ofertante', fecha_vigencia varchar(20) comment 'fecha de vigencia de la oferta', fecha_publicacion varchar(20) comment 'fecha de publicacion de la oferta', PRIMARY KEY (id)) comment='tabla en la que se guardaran las ofertas que se ingresen al sistema';

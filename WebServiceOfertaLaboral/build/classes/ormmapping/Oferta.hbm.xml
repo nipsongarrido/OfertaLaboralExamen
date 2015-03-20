@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="Oferta" table="oferta" lazy="false">
+		<meta attribute="class-description">
+			tabla en la que se guardaran las ofertas que se ingresen al sistema
+		</meta>
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="increment">
+			</generator>
+		</id>
+		<property name="detalle" column="detalle" type="string" length="255" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				detalle de la oferta
+			</meta>
+		</property>
+		<property name="mail" column="mail" type="string" length="255" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				email del ofertante
+			</meta>
+		</property>
+		<property name="fecha_vigencia" column="fecha_vigencia" type="string" length="20" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				fecha de vigencia de la oferta
+			</meta>
+		</property>
+		<property name="fecha_publicacion" column="fecha_publicacion" type="string" length="20" not-null="false" lazy="false">
+			<meta attribute="field-description">
+				fecha de publicacion de la oferta
+			</meta>
+		</property>
+	</class>
+</hibernate-mapping>
